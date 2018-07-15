@@ -1,8 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 import registerServiceWorker from './registerServiceWorker';
+import { HashRouter, Route, Redirect } from 'react-router-dom';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import HomeScreen from './views/screens/HomeScreen';
+import CodingScreen from './views/screens/CodingScreen';
+import MusicScreen from './views/screens/MusicScreen';
+import PictureScreen from './views/screens/PictureScreen';
+import './index.css';
+
+
+ReactDOM.render(
+	<HashRouter>
+		<div>
+			<Route exact path="/" render={() => <Redirect to="/home"/>} />
+			<Route exact path="/home" component={HomeScreen} />
+			<Route exact path="/coding" component={CodingScreen} />
+			<Route exact path="/music" component={MusicScreen} />
+			<Route exact path="/picture" component={PictureScreen} />
+		</div>
+	</HashRouter>,
+	document.getElementById('root'));
+
 registerServiceWorker();
