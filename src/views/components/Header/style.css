@@ -1,0 +1,23 @@
+.menu {
+    background: rgba(255, 255, 255, 0.32);
+    height: 40px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 13px;
+    overflow: hidden;
+}
+
+.item {
+	color: white;
+    vertical-align: middle;
+  	line-height: 40px;
+  	margin-right: 3%;
+    text-decoration: none;
+    text-shadow: -1px 0 grey, 0 1px grey, 1px 0 grey, 0 -1px grey;
+}
+
+.home {
+    font-weight: bold;
+    font-size: 25px;
+    margin: 0 5%;
+}
