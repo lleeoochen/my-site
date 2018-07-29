@@ -1,9 +1,10 @@
 body {
 	margin: 0;
 	padding: 0;
-	font-family: sans-serif;
+	color: white;
+	font-family: Georgia, Verdana, Serif;
 	background-image: url("/assets/background.png");
 	background-color: #cccccc;
-	object-fit: cover;
-	font-family: Georgia, Verdana, Serif;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 }

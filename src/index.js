@@ -16,11 +16,11 @@ ReactDOM.render(
 	<HashRouter>
 		<div>
 			<Header />
+			<Route exact path="/" render={ () => <Redirect to={ Constants.PAGES.HOME.ROUTE }/> }/>
 			<Route exact path={ Constants.PAGES.HOME.ROUTE }    component={ HomeScreen }/>
 			<Route exact path={ Constants.PAGES.CODING.ROUTE }  component={ CodingScreen }/>
 			<Route exact path={ Constants.PAGES.MUSIC.ROUTE }   component={ MusicScreen }/>
 			<Route exact path={ Constants.PAGES.PICTURE.ROUTE } component={ PictureScreen }/>
-			<Route exact path={ Constants.PAGES.VIDEO.ROUTE }   component={ HomeScreen }/>
 		</div>
 	</HashRouter>,
 	document.getElementById('root'));
