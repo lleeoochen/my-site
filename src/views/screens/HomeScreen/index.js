@@ -3,11 +3,11 @@ import { StaticRouter } from 'react-router';
 import './style.css';
 
 export default class HomeScreen extends Component {
-  render() {
+	render() {
 		return (
 			<div>
 				Home
 			</div>
 		);
-  }
+	}
 }
