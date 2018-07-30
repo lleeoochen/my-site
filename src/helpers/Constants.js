@@ -6,4 +6,8 @@ export default class Constants {
 		PICTURE: { ROUTE: '/picture', TITLE: 'Photography' },
 		VIDEO:   { ROUTE: '/video',   TITLE: 'Educational Videos' }
 	};
+	static IMAGES = {
+		BACKGROUND: '/assets/background.png',
+		WHALE: '/assets/whale.png'
+	};
 }
