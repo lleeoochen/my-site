@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { StaticRouter } from 'react-router';
-import { Button, Image, Transition } from 'semantic-ui-react';
+import { Button, Slide, Typography } from '@material-ui/core';
 
 import Constants from 'helpers/Constants';
 import './index.css';
@@ -8,50 +8,51 @@ import './index.css';
 export default class HomeScreen extends Component {
 
 	state = {
-		dive: false,
-		complete: true
+		dive: false
 	}
 
 	toggleDive = () => {
 		this.setState({
-			dive: !this.state.dive,
-			complete: false
-		});
-	}
-
-	transitionComplete = () => {
-		this.setState({
-			complete: true
+			dive: !this.state.dive
 		});
 	}
 
 	render() {
 		document.title = Constants.PAGES.HOME.TITLE;
-		let { dive, complete } = this.state;
+		let dive = this.state.dive;
 		let styles = createStyles();
 		let action = dive ? 'Dive Out' : 'Dive In';
 		let direction = dive ? 'left' : 'right';
 
 		return (
-			<div style={ styles.container.main }>
-				<h1 style={ styles.header }> Welcome to My Website. </h1>
+			<div style={styles.containerMain}>
+				<Typography style={styles.header}>
+					Welcome to My Website.
+				</Typography>
+
 				<Button
-					disabled={ !complete }
-					content={ action }
-					onClick={ this.toggleDive }/>
+					variant={"contained"}
+					children={action}
+					onClick={this.toggleDive}/>
+
 				<div
-					class={ 'slant ' + direction }
-					style={ styles.container.animation }>
-					<Transition
-						visible={ dive }
-						animation={ 'fly ' + direction }
-						onComplete={ this.transitionComplete }
-						duration={ 3000 }>
-						<Image
-							src={ Constants.IMAGES.WHALE }
-							className='center'
-							size='medium'/>
-					</Transition>
+					className={'slant ' + direction}
+					style={styles.containerAnimation}>
+					<Slide
+						in={dive}
+						direction={direction}
+						timeout={{
+							enter: 3000,
+							exit: 1000
+						}}
+						mountOnEnter
+						unmountOnExit
+						width={50}>
+						<img
+							src={Constants.IMAGES.WHALE}
+							alt={"Whale"}
+							className='center'/>
+					</Slide>
 				</div>
 			</div>
 		);
@@ -60,17 +61,16 @@ export default class HomeScreen extends Component {
 
 function createStyles() {
 	return {
-		container: {
-			animation: {
-				marginTop: 100
-			},
-			main: {
-				textAlign: 'center',
-				marginTop: 100
-			}
+		containerMain: {
+			textAlign: 'center',
+			marginTop: 100
+		},
+		containerAnimation: {
+			marginTop: 100
 		},
 		header: {
-			fontSize: 50
+			fontSize: 50,
+			color: 'white'
 		}
 	};
 }
