@@ -14,8 +14,7 @@ import './index.css';
 
 const THEME = createMuiTheme({
    typography: {
-    "fontFamily": "\"Comic Sans Ms\", \"Helvetica\", \"Arial\", sans-serif",
-    "fontSize": 14,
+    "fontSize": 15,
     "fontWeightLight": 300,
     "fontWeightRegular": 400,
     "fontWeightMedium": 500

@@ -26,14 +26,15 @@ export default class HomeScreen extends Component {
 
 		return (
 			<div style={styles.containerMain}>
-				<Typography style={styles.header}>
-					Welcome to My Website.
-				</Typography>
+				<Typography
+					style={styles.header}
+					children={"Welcome to My Website."}/>
 
 				<Button
+					style={styles.button}
 					variant={"contained"}
-					children={action}
-					onClick={this.toggleDive}/>
+					onClick={this.toggleDive}
+					children={action}/>
 
 				<div
 					className={'slant ' + direction}
@@ -70,6 +71,11 @@ function createStyles() {
 		},
 		header: {
 			fontSize: 50,
+			color: 'white',
+			textShadow: '-1px -1px 0 #00008B, 1px -1px 0 #00008B, -1px 1px 0 #00008B, 1px 1px 0 #00008B',
+		},
+		button: {
+			backgroundColor: '#00008B',
 			color: 'white'
 		}
 	};

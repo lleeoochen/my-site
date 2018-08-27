@@ -13,7 +13,10 @@ export default class Constants {
 		CHESS:         '/assets/images/web-chess.png',
 		CHROME_EDITOR: '/assets/images/chrome-editor.png',
 		GOLD_DIGGER:   '/assets/images/gold-digger.png',
-		DISK_GALAXY:   'https://github.com/lleeoochen/Disk-Galaxy/blob/master/Assets/Game_Screenshot.png?raw=true'
+		DISK_GALAXY:   'https://github.com/lleeoochen/Disk-Galaxy/blob/master/Assets/Game_Screenshot.png?raw=true',
+
+		ICE_CREAM:     '/assets/images/favorite/ice_cream.png',
+		LAGOON:        '/assets/images/favorite/lagoon.png'
 	};
 	static APPS = {
 		NOTEBOOK_APP:  '/assets/applications/android_notebook_app.apk'

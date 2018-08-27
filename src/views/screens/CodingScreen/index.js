@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { StaticRouter } from 'react-router';
-import { Card, CardActions, CardMedia, CardContent, Typography, Button } from '@material-ui/core';
 
 import Constants from 'helpers/Constants';
+import MediaCard from 'views/components/MediaCard';
 import './style.css';
 
 export default class CodingScreen extends Component {
@@ -13,75 +13,59 @@ export default class CodingScreen extends Component {
 
 		let dataList = [
 			{
-				title:       'GOLD Digger',
-				description: 'This is a data analysis website that helps UCSB students determine which classes to signup first before seats run out.',
-				media:       <img src={Constants.IMAGES.GOLD_DIGGER} style={styles.dataMedia}/>,
-				viewUrl:     'https://ucsb-gold-digger.herokuapp.com/',
-				repoUrl:     'https://github.com/n-duncan/GOLD-Digger'
+				title: 'GOLD Digger',
+				detail: 'This is a data analysis website that helps UCSB students determine which classes to signup first before seats run out.',
+				source: {
+					view: 'https://ucsb-gold-digger.herokuapp.com/',
+					repo: 'https://github.com/n-duncan/GOLD-Digger',
+					image: Constants.IMAGES.GOLD_DIGGER
+				}
 			},
 			{
-				title:       'Web Chess',
-				description: 'This is an online chess game for chess lovers, with AI bot included.',
-				media:       <img src={Constants.IMAGES.CHESS} style={styles.dataMedia}/>,
-				viewUrl:     'https://lleeoochen.github.io/web-chess/',
-				repoUrl:     'https://github.com/lleeoochen/web-chess'
+				title: 'Web Chess',
+				detail: 'This is an online chess game for chess lovers, with AI bot included.',
+				source: {
+					view: 'https://lleeoochen.github.io/web-chess/',
+					repo: 'https://lleeoochen.github.io/web-chess/',
+					image: Constants.IMAGES.CHESS
+				}
 			},
 			{
-				title:       'Desk Galaxy',
-				description: 'This is a 2D shooting game made using SFML and C++. You can fight against AI enemies.',
-				media:       <img src={Constants.IMAGES.DISK_GALAXY} style={styles.dataMedia}/>,
-				viewUrl:     '',
-				repoUrl:     'https://github.com/lleeoochen/Disk-Galaxy'
+				title: 'Disk Galaxy',
+				detail: 'This is a 2D shooting game made using SFML and C++. You can fight against AI enemies.',
+				source: {
+					view: '',
+					repo: 'https://github.com/lleeoochen/Disk-Galaxy',
+					video: 'https://www.youtube.com/embed/Ohq8ZeJKKxo'
+				}
 			},
 			{
-				title:       'Chrome Editor',
-				description: 'You can bring this text editor extension anywhere you go.',
-				media:       <img src={Constants.IMAGES.CHROME_EDITOR} style={styles.dataMedia}/>,
-				viewUrl:     'https://chrome.google.com/webstore/detail/chrome-editor/kefkdcgjkbijkajfmjochhmikmpmkofg?utm_source=chrome-ntp-icon',
-				repoUrl:     'https://github.com/lleeoochen/chrome-editor'
+				title: 'Chrome Editor',
+				detail: 'You can bring this text editor extension anywhere you go.',
+				source: {
+					view: 'https://chrome.google.com/webstore/detail/chrome-editor/kefkdcgjkbijkajfmjochhmikmpmkofg?utm_source=chrome-ntp-icon',
+				  repo: 'https://github.com/lleeoochen/chrome-editor',
+				  image: Constants.IMAGES.CHROME_EDITOR
+				}
 			},
 			{
-				title:       'Notebook App',
-				description: 'This is a simple notebook app for Android users.',
-				media:       <iframe src='https://www.youtube.com/embed/UnPiLyx3pAI' style={styles.dataMedia}/>,
-				viewUrl:     Constants.APPS.NOTEBOOK_APP,
-				repoUrl:     ''
+				title: 'Notebook App',
+				detail: 'This is a simple notebook app for Android users.',
+				source: {
+					view: Constants.APPS.NOTEBOOK_APP,
+					repo: 'https://github.com/lleeoochen/android-notebook',
+					video: 'https://www.youtube.com/embed/UnPiLyx3pAI'
+				}
 			}
 		];
 
 		let projects = dataList.map((data, index) => {
-			return (
-				<Card key={index} style={styles.dataContainer}>
-
-					<CardContent>
-						<Typography gutterBottom variant="headline" component="h2">
-							{data.title}
-						</Typography>
-						<Typography component="p">
-							{data.description}
-						</Typography>
-					</CardContent>
-
-					<CardMedia title={data.title}>
-						<a href={data.viewUrl} target="_blank"> {data.media} </a>
-					</CardMedia>
-
-					<CardActions>
-						<Button size="small" color="primary" href={data.viewUrl} target="_blank" download>
-							View Project
-						</Button>
-						<Button size="small" color="primary" href={data.repoUrl} target="_blank" download>
-							View Source
-						</Button>
-					</CardActions>
-
-				</Card>
-			);
+			return <MediaCard data={data} key={index}/>;
 		});
 
 		return (
-			<div style={ styles.containerMain }>
-				{ projects }
+			<div style={styles.containerMain}>
+				{projects}
 			</div>
 		);
 	}
@@ -95,16 +79,6 @@ function createStyles() {
 			display: 'flex',
 			flexWrap: 'wrap',
 			justifyContent: 'center'
-		},
-		dataContainer: {
-			width: 345,
-			margin: 20,
-			backgroundColor: '#ffffffdd'
-		},
-		dataMedia: {
-			width: 300,
-			margin: 10,
-			borderRadius: 5
 		}
 	};
 }
