@@ -26,7 +26,7 @@ export default class CodingScreen extends Component {
 				detail: 'This is an online chess game for chess lovers, with AI bot included.',
 				source: {
 					view: 'https://lleeoochen.github.io/web-chess/',
-					repo: 'https://lleeoochen.github.io/web-chess/',
+					repo: 'https://github.com/lleeoochen/web-chess',
 					image: Constants.IMAGES.CHESS
 				}
 			},
@@ -37,6 +37,13 @@ export default class CodingScreen extends Component {
 					view: '',
 					repo: 'https://github.com/lleeoochen/Disk-Galaxy',
 					video: 'https://www.youtube.com/embed/Ohq8ZeJKKxo'
+				}
+			},
+			{
+				title: 'My Personal Website',
+				detail: 'This website is built to display my side projects, music recordings, and other hobbies.',
+				source: {
+				  repo: 'https://github.com/lleeoochen/my-site',
 				}
 			},
 			{
