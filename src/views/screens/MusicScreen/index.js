@@ -36,7 +36,7 @@ export default class MusicScreen extends Component {
 				title: 'Prokofiev Cello Concerto Mvmt1',
 				detail: 'This is my recording of Prokofiev Cello Concerto Movement 1 at My Instructor\'s place (October 2014).',
 				source: {
-					video: 'https://drive.google.com/file/d/15nl78Ro20QK20mFFmroBOcEX69a7Ws4O/preview'
+					video: 'https://drive.google.com/file/d/0Bw1z8QIRVZiAQmE5Q0VMQlV6X3M/preview'
 				}
 			}
 		];
