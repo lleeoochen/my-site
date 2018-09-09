@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import registerServiceWorker from './registerServiceWorker';
-import { HashRouter, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter, Route, Redirect } from 'react-router-dom';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
 import Header from 'views/components/Header';
@@ -23,7 +23,7 @@ const THEME = createMuiTheme({
 
 ReactDOM.render(
   <MuiThemeProvider theme={THEME}>
-		<HashRouter>
+		<BrowserRouter>
 			<div>
 				<Header />
 				<Route exact path={ Constants.PAGES.HOME.ROUTE }    component={ HomeScreen }/>
@@ -31,7 +31,7 @@ ReactDOM.render(
 				<Route exact path={ Constants.PAGES.MUSIC.ROUTE }   component={ MusicScreen }/>
 				<Route exact path={ Constants.PAGES.PICTURE.ROUTE } component={ PictureScreen }/>
 			</div>
-		</HashRouter>
+		</BrowserRouter>
   </MuiThemeProvider>,
 	document.getElementById('root'));
 
