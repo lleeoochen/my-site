@@ -1,7 +1,7 @@
 export default class Constants {
 	static FONT = 'Comic Sans MS';
 	static PAGES = {
-		HOME:    { ROUTE: '/',        TITLE: 'Wei Tung Chen'      },
+		HOME:    { ROUTE: '',        TITLE: 'Wei Tung Chen'      },
 		CODING:  { ROUTE: '/coding',  TITLE: 'Coding Projects'    },
 		MUSIC:   { ROUTE: '/music',   TITLE: 'Music Recordings'   },
 		PICTURE: { ROUTE: '/picture', TITLE: 'Photography'        },
