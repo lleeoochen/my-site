@@ -26,7 +26,6 @@ ReactDOM.render(
 		<HashRouter>
 			<div>
 				<Header />
-				<Route exact path="/" render={ () => <Redirect to={ Constants.PAGES.HOME.ROUTE }/> }/>
 				<Route exact path={ Constants.PAGES.HOME.ROUTE }    component={ HomeScreen }/>
 				<Route exact path={ Constants.PAGES.CODING.ROUTE }  component={ CodingScreen }/>
 				<Route exact path={ Constants.PAGES.MUSIC.ROUTE }   component={ MusicScreen }/>
