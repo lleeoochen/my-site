@@ -64,8 +64,7 @@ export default class MediaCard extends Component {
 				size="small"
 				color="primary"
 				href={link}
-				target="_blank"
-				download>
+				target="_blank">
 				{label}
 			</Button>
 		);

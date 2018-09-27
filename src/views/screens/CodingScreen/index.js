@@ -43,7 +43,9 @@ export default class CodingScreen extends Component {
 				title: 'My Personal Website',
 				detail: 'This website is built to display my side projects, music recordings, and other hobbies.',
 				source: {
-				  repo: 'https://github.com/lleeoochen/my-site',
+					view: 'https://weitungchen.herokuapp.com/home',
+					repo: 'https://github.com/lleeoochen/my-site',
+					image: Constants.IMAGES.MY_WEBSITE
 				}
 			},
 			{
@@ -51,8 +53,8 @@ export default class CodingScreen extends Component {
 				detail: 'You can bring this text editor extension anywhere you go.',
 				source: {
 					view: 'https://chrome.google.com/webstore/detail/chrome-editor/kefkdcgjkbijkajfmjochhmikmpmkofg?utm_source=chrome-ntp-icon',
-				  repo: 'https://github.com/lleeoochen/chrome-editor',
-				  image: Constants.IMAGES.CHROME_EDITOR
+					repo: 'https://github.com/lleeoochen/chrome-editor',
+					image: Constants.IMAGES.CHROME_EDITOR
 				}
 			},
 			{

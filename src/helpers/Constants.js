@@ -14,6 +14,7 @@ export default class Constants {
 		CHROME_EDITOR: '/assets/images/chrome-editor.png',
 		GOLD_DIGGER:   '/assets/images/gold-digger.png',
 		DISK_GALAXY:   'https://github.com/lleeoochen/Disk-Galaxy/blob/master/Assets/Game_Screenshot.png?raw=true',
+		MY_WEBSITE:    '/assets/images/my-website.png',
 
 		ICE_CREAM:     '/assets/images/favorite/ice_cream.png',
 		LAGOON:        '/assets/images/favorite/lagoon.png'
