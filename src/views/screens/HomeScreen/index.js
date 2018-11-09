@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { StaticRouter } from 'react-router';
 import { Button, Slide, Typography } from '@material-ui/core';
 
 import Constants from 'helpers/Constants';

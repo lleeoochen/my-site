@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import { StaticRouter } from 'react-router';
 import { Card, CardActions, CardMedia, CardContent, Typography, Button } from '@material-ui/core';
-
-import Constants from 'helpers/Constants';
 
 export default class MediaCard extends Component {
 
@@ -45,13 +42,14 @@ export default class MediaCard extends Component {
 
 	loadImage(image, style) {
 		if (image && style) return (
-			<img src={image} style={style}/>
+			<img src={image} style={style} alt=""/>
 		);
 	}
 
 	loadVideo(video, style) {
 		if (video && style) return (
 			<iframe
+				title="video"
 				src={video}
 				style={style}
 				allowfullscreen="allowfullscreen"/>
